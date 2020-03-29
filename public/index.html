@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>css/grid.css">
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>css/style.css">
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>css/responsive.css">
   </head>
   <body>
     <noscript>
@@ -14,4 +17,17 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+  <script>
+    
+    let show = (target) => {
+      targetku = target.path[2];
+      otherActive = document.querySelector("article.active")
+      if(otherActive == null){
+        targetku.className = "active";
+      }else{
+        targetku.className = "active";
+        otherActive.className = "";
+      }
+    }
+  </script>
 </html>
